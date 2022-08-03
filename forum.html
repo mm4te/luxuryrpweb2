@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forum.css">
+    <title>[LATAM] Luxury RP</title>
+    <link rel="icon" href="img/luxury_logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" integrity="sha384-fZCoUih8XsaUZnNDOiLqnby1tMJ0sE7oBbNk2Xxf5x8Z4SvNQ9j83vFMa/erbVrV" crossorigin="anonymous"/>
+    <!-- For apple devices -->
+    
+</head>
+
+<body>
+
+  
+  <div class="contenedor_loader">
+    <div class="loader"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+  <div class="cursor cursor--small"></div>
+  <canvas class="cursor cursor--canvas" resize></canvas>
+  <!-- Header -->
+  <section id="header" >
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          
+          <a href="#hero" onclick="history.go(0)">
+            
+            <p><span>Luxury</span> R <span></span>P</p>
+            
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar" ></div>
+          </div>
+          <ul>
+            <li><a href="./index.html" data-after="Home" >INICIO</a></li>
+            <li><a href="#contact" data-after="Contact" class="activo" >CONTACTARNOS</a></li>
+            <li><a href="" data-after="normativas">Normativas</a></li>
+            <li><a href="./vips.html"  data-after="Service">TIENDA</a></li>
+            <li><a href="./log.html" data-after = "Log" >Acceso</a></li>
+            <li><a href="https://cfx.re/join/dkqge3" target="_blank" data-after = "Play" class="cta3" >Jugar</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  
+  <a id="youtube" onclick="history.go(0)">
+    <div class=".logo">
+      <img src="./img/luxury_logo.png" alt="img">
+    </div>
+  </a>
+  
+  
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Envia un correo al equipo de staff <span></span></h1>
+
+      </div>
+    </div>
+  </section>
+  
+
+
+  <div class="container">
+    <span class="big-circle" id="contact"></span>
+    <div class="form">
+      
+      <div class="contact-info">
+        <h3 class="title">STAFF</h3>
+        <p class="text">
+        Envíanos un correo ante una duda fuera de rol, por propuestas o lo que quieras!
+        </p>
+
+        <div class="info">
+          <div class="information">
+            <img src="https://img.icons8.com/ios/344/checked-2--v1.png" class="icon" alt="" />
+            <p>Se revisa el buzón todos los dias y se contesta el mismo</p>
+          </div>
+          <div class="information">
+            <img src="https://img.icons8.com/external-anggara-glyph-anggara-putra/344/external-information-support-anggara-glyph-anggara-putra.png" class="icon" alt="" />
+            <p>Pedimos respeto y paciencia al momento de mandar el correo!</p>
+          </div>
+          <div class="information">
+            <img src="https://img.icons8.com/ios-filled/344/error--v1.png" class="icon" alt="" />
+            <p>Si envia un correo fuera de lugar, recibirá una sanción acumulable</p>
+          </div>
+        </div>
+
+        <div class="social-media">
+<!--           <p>Connect with us :</p>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="contact-form" onload="load()" >
+
+
+        <form  autocomplete="on"  action="https://formsubmit.co/luxuryrparg@outlook.com" method="POST"><!-- onsubmit="sendEmail(); reset(); return false;" -->
+          <input type="hidden" name="_next" value="https://en3r.github.io/luxuryrpweb/index.html">
+          <h3 class="title">Contactarnos</h3>
+          <div class="input-container">
+            <input type="name" name="name" id="name" class="input" />
+            <label for="">Nombre</label>
+            <span>Nombre</span>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" id="email" class="input" autocomplete="on"  />
+            <label for="">Email</label>
+            <span>Email</span>
+          </div>
+          <div class="input-container">
+            <input type="steam" name="steam" id="steam" class="input" required />
+            <label for="">ID (nombre steam/ID discord)</label>
+            <span>ID (nombre steam/ID discord)</span>
+          </div>
+          <div class="input-container textarea">
+            <textarea name="message" id="message" class="input" required ></textarea>
+            <label for="">Mensaje</label>
+            <span>Mensaje</span>
+          </div>
+          <input type="submit" value="Enviar" class="btn" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- End Contact Section -->
+
+  
+  
+<style>
+  .navegacion{
+    /* position: relative; */
+    /* width: 70px; */
+    height: 350px;
+    background: rgba(131, 129, 129, 0.082);
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0);
+    position: fixed;
+    right: 0;
+    top: 40%;
+    width: 7em;
+    margin-right: 0.5em;
+    margin-top: -2.5em;
+    z-index: 9999999;
+
+  }
+  .navegacion ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    display: flex;
+    flex-direction: column;
+  }
+  .navegacion ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+  }
+  .navegacion ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+  }
+  .navegacion ul li a .icono{
+    position: relative;
+    display: block;
+    justify-content: center;
+    line-height: 75px;
+    text-align: center;
+    
+    width: 100%;
+    transition: 0.5s;
+  }
+
+  .navegacion ul li.activo a .icono{
+  color: #fff;
+  }
+  .navegacion ul li a .icono .fa{
+    font-size: 24px;
+  }
+  .navegacion ul li a .titulo{
+    position: absolute;
+    top: 50%;
+    left: 110px;
+    transform: translateY(-50%);
+    background: #fff;
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba( 0, 0, 0, 0.1);
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .navegacion ul li:hover a .titulo{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-25%) translateY(-50%);
+  }
+  .navegacion ul li a .titulo::before{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    top: 46%;
+    left: -8px;
+    transform: rotate(45deg) translateY(-50%);
+    border-radius: 2px;
+  }
+  .navegacion ul .indicador{
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 70px;
+
+    transition: 0.5s;
+  }
+  .navegacion ul .indicador::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.5s;
+
+  }
+  .navegacion ul li:nth-child(1).activo ~ .indicador{
+    transform: translateY(calc(70px * 0));
+  }
+  .navegacion ul li:nth-child(2).activo ~ .indicador{
+    transform: translateY(calc(70px * 1));
+  }
+  .navegacion ul li:nth-child(3).activo ~ .indicador{
+    transform: translateY(calc(70px * 2));
+  }
+  .navegacion ul li:nth-child(4).activo ~ .indicador{
+    transform: translateY(calc(70px * 3));
+  }
+  .navegacion ul li:nth-child(5).activo ~ .indicador{
+    transform: translateY(calc(70px * 4));
+  }
+
+  .navegacion ul li:nth-child(1).activo ~ .indicador::before{
+    background: #0a91ff;
+  }
+  .navegacion ul li:nth-child(2).activo ~ .indicador::before{
+    background: #0a91ff;
+  }
+  .navegacion ul li:nth-child(3).activo ~ .indicador::before{
+    background: #0a91ff;
+  }
+  .navegacion ul li:nth-child(4).activo ~ .indicador::before{
+    background: #0a91ff;
+  }
+  .navegacion ul li:nth-child(5).activo ~ .indicador::before{
+    background: #0a91ff;
+  }  
+  </style>
+</head>
+<body>
+  <div class="navegacion">
+    <ul>
+      <li class="lista activo" data-color="#f53b57">
+        
+        <a href="https://www.youtube.com/channel/UCrEYGZtNYbd1k3VUczX2kPA"  id="photo" title="Youtube" tooltip-dir="top" target="_blank"> 
+          <span class="icono"><i class="fa-brands fa-youtube fa-2xl"></i></span >
+          <span class="titulo">Inicio</span>
+        </a>
+      </li>
+      <li class="lista" data-color="#3c40c6">
+        <a href="https://www.instagram.com/nico_ruggia/" id="photo" title="Instagram" tooltip-dir="top" target="_blank">
+          <span class="icono"><i class="fa-brands fa-instagram fa-2xl"></i></span>
+          <span class="titulo">Perfil</span>
+        </a>
+      </li>
+      <li class="lista" data-color="#05c46b">
+        <a href="forum.html" title="Contactarnos">
+          <span class="icono"><i class="fa fa-comment"></i></span>
+          <span class="titulo">Mensajes</span>
+        </a>
+      </li>
+      <li class="lista" data-color="#0fbcf9">
+          <a href="luxuryrparg@outlook.com" target="_blank" id="photo" >
+            <span class="icono"><i class="fa-solid fa-at fa-2xl"></i></span>
+            <span class="titulo">Ayuda</span>
+          </a>
+      </li>
+      <li class="lista" data-color="#ffa801">
+        <a href="#" target="_blank">
+          <span class="icono"><i class="fa fa-cog fa-spin"></i></span>
+          <span class="titulo">Configurar</span>
+        </a>
+      </li>
+      <div class="indicador"></div>
+    </ul>
+  </div>
+
+  
+<!--   <select id="directions">
+    <option value="left" selected>Left</option>
+    <option value="right">Right</option>
+    <option value="bottom">Bottom</option>
+    <option value="top">Top</option>
+  </select>
+ -->
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>Luxury</span> RP <span></span></h1>
+      </div>
+<!--       <h2>Visitanos de otro lado</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="https://www.instagram.com/nico_ruggia/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111819.png" /></a>
+        </div>
+      </div> -->
+      <p>Copyright © 2022 LuxuryRP. Todos los derechos reservados</p>
+    </div>
+  </section>
+  
+  <!-- End Footer -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./forum.js"></script>
+  <script>
+    let lista = document.querySelectorAll('.lista');
+    for(let i=0; i<lista.length; i++){
+     lista[i].onmouseover = function(){
+      let j = 0;
+      while(j<lista.length){
+        lista[j++].className = 'lista';
+      }
+      lista[i].className = 'lista activo';
+     }
+    }
+
+    lista.forEach(elemens=>{
+      elemens.addEventListener("mouseenter", function(event){
+        let bg = document.querySelector('body');
+        bg.style.backgroundColor = color;
+        let color = event.target.getAttribute('data-color');
+      })
+    })
+  </script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail(){
+        Email.send({
+          Host : "smtp.elasticemail.com",
+          Port : "2525",
+          Username : "luxuryrparg@outlook.com",
+          Password : "3AC96DC5BE42869340962E788E999FB685531F362A63BDC6A1F3B6EAD8B0A1736B4A023563B9B7F4964A1B2804881F09",
+          To : 'luxuryrparg@outlook.com',
+          From : document.getElementById("email").value,
+          Subject : "This is the subject",
+          Body : "And this is the body"
+      }).then(
+      message => alert(message)
+      );
+    }
+</script>
+</body>
+
+
+
+</html>
